@@ -1,6 +1,6 @@
 # SAGE Documentation
 
-Read the documentation  at [link](https://link)
+Read the documentation  at [ails-lab.github.io/SAGE_Documentation](https://ails-lab.github.io/SAGE_Documentation/#/)
 
 ## Notes for contributors
 - Add texts by simply using `Markdown` markup language
