@@ -54,7 +54,7 @@ Information about the dataset is appearing on the top, like if the dataset is pu
 
 6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image4.png" width="auto">
  or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image13.png" width="auto">
- button and the “Define parameters” section is appearing</p>
+ button and the “Define parameters” section apperas</p>
 
 <img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image14.png" width="auto">
 
