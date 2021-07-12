@@ -5,4 +5,4 @@ Read the documentation  at [ails-lab.github.io/SAGE_Documentation](https://ails-
 ## Notes for contributors
 - Add texts by simply using `Markdown` markup language
 - Images go under the `_media` folder and called with markdown
-- Documentation was made with docsify - check its documentation for adding content [documentation](https://docsify.js.org/#/)
+- This documentation was created with docsify - for adding content, check its own documentation [here](https://docsify.js.org/#/).

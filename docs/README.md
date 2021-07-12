@@ -1,40 +1,96 @@
-# SAGE Documentation
+# SAGE Instructions
 
-## docsify demo content
+## What is SAGE?
 
-> A magical documentation site generator.
+SAGE is a platform that leverages the use of Linked Data and AI in order to provide Automatic Enrichments on metadata, along with a validation functionality.
 
-## What it is
+## Data flow inside SAGE
 
-docsify generates your documentation website on the fly. Unlike GitBook, it does not generate static html files. Instead, it smartly loads and parses your Markdown files and displays them as a website. To start using it, all you need to do is create an `index.html` and [deploy it on GitHub Pages](deploy.md).
+`Import from source -> Map metadata to RDF -> Publish on triplestore -> Enrich metadata with the use of Annotators -> Validate the Results -> Export the results`
 
-See the [Quick start](quickstart.md) guide for more details.
+## How SAGE treats data
 
-## Features
+Using SAGE, you can import data from multiple sources in various formats, in order to later perform operations on them. The data is harvested from remote APIs, mapped to RDF triples, and then stored in a triple store.
 
-- No statically built html files
-- Simple and lightweight
-- Smart full-text search plugin
-- Multiple themes
-- Useful plugin API
-- Emoji support
-- Compatible with IE11
-- Support server-side rendering ([example](https://github.com/docsifyjs/docsify-ssr-demo))
+The procedure that involves harvesting (gathering) data from remote APIs and converting (mapping) them to RDF triples is called the “**EXECUTION**” step of the importation of a dataset. After the execution step, the data is mapped to RDF and stored to our servers as RDF files, but not yet uploaded to the triple store (database). In this step, the user can double check to see that the operation was successful before proceeding to the actual publication.
 
-## Examples
+The procedure that involves uploading RDF files to the triplestore is called the “**PUBLICATION**” procedure. After publishing, the metadata is available in the triplestore and SAGE can perform enrichments on it.
 
-Check out the [Showcase](https://github.com/docsifyjs/awesome-docsify#showcase) to see docsify in use.
+## Data Importation 
 
-## Donate
+In this example, we are going to go step-by-step on how to import data from europeana to the SAGE platform
 
-Please consider donating if you think docsify is helpful to you or that my work is valuable. I am happy if you can help me [buy a cup of coffee](https://github.com/QingWei-Li/donate). :heart:
+1. Go to the “Collections Import” Tab
+   
+<img src="/_media/image9.png" width="auto">
 
-## Community
+On this tab, the user has an overview of the datasets that they have already created. 
 
-Users and the development team are usually in the [Discord server](https://discord.gg/3NwKFyR).
+2. Click on the “+” sign next to “Dataset” in order to create a new Dataset. This opens the “Create Dataset” modal, shown below:
 
-## Special Thanks
+<img src="/_media/image12.png" width="auto">
 
-_Vercel_ has given us a Pro account.
+Here, the user defines a name for the dataset they are going to create, and selects which import method to use. In our case, we will choose “Europeana Import”.
 
-<a href="https://vercel.com/?utm_source=docsifyjsdocs" target="_blank"><img src="https://cdn.jsdelivr.net/gh/docsifyjs/docsify/docs/_media/vercel_logo.svg" width="100px"></a>
+<img src="/_media/image8.png" width="auto">
+
+Then click OK.
+
+3. After creation, the dataset is now available in the list on the left, which as we mentioned, contains the datasets that the user has created. Click on the name of the dataset that you just created.
+
+4. The Dataset overview window appears
+
+<img src="/_media/image6.png" width="auto">
+
+Information about the dataset is appearing on the top, like if the dataset is published, the dataset name, id etc.
+
+5. Right now the dataset is empty. It is created, but not populated with data. In order to populate it with data, the user has two different methods of import to choose from (on the case of Europeana Import):
+
+    i) Import by QUERY </br>
+    The data that will be imported will be the results of a query performed against the Europeana API
+
+    ii) Import by COLLECTION name </br>
+    Will import a whole collection from Europeana based on the name of that collection
+
+6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="/_media/image4.png" width="auto">
+ or “Add QUERY” <img style="vertical-align: middle;" src="/_media/image13.png" width="auto">
+ button and the “Define parameters” section is appearing</p>
+
+<img src="/_media/image14.png" width="auto">
+
+Here, the user inputs a collection name (in case of collection) or a query (in case of query), plus an api key that can be obtained from europeana.
+
+As you can see, there is a “load key” dropdown appearing, enabling the user to use one of his predefined API keys (keys can be defined in the profile section)
+
+7. After the user inputs the parameters, the dataset is ready to be **EXECUTED**:
+
+<img src="/_media/image7.png" width="auto">
+
+Note: The user can use a combination of both QUERY and COLLECTION methods to create a dataset containing data from various Europeana Collections, or Europeana Queries. You just have to click again and define the new parameters. Example:
+
+<img src="/_media/image15.png" width="auto">
+
+8. After we have defined the parameters, we can now execute our Dataset. We click on the Actions button on our instance (the parameter set) that we want to execute, and select “Execute Instance”:
+
+<img src="/_media/image3.png" width="auto">
+
+9. A Status Report is opening, showing us how many items are processed:
+
+<img src="/_media/image10.png" width="auto">
+
+
+10. When the execute finishes, the output is like this:
+
+<img src="/_media/image1.png" width="auto">
+
+11. After the execution is completed successfully, we can now publish the dataset. To do that, we hit `Dataset Actions -> Publish` in the top right of the window:
+
+<img src="/_media/image2.png" width="auto">
+
+12. When the publish is over, the output is like this:
+
+<img src="/_media/image5.png" width="auto">
+
+13. Now that the dataset is published, we can now see its content from the “Published Collections” Tab:
+
+<img src="/_media/image11.png" width="auto">
