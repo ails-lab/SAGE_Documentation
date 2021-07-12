@@ -22,17 +22,17 @@ In this example, we are going to go step-by-step on how to import data from euro
 
 1. Go to the “Collections Import” Tab
    
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image9.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image9.png" width="auto">
 
 On this tab, the user has an overview of the datasets that they have already created. 
 
 2. Click on the “+” sign next to “Dataset” in order to create a new Dataset. This opens the “Create Dataset” modal, shown below:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image12.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image12.png" width="auto">
 
 Here, the user defines a name for the dataset they are going to create, and selects which import method to use. In our case, we will choose “Europeana Import”.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image8.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image8.png" width="auto">
 
 Then click OK.
 
@@ -40,7 +40,7 @@ Then click OK.
 
 4. The Dataset overview window appears
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image6.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image6.png" width="auto">
 
 Information about the dataset is appearing on the top, like if the dataset is published, the dataset name, id etc.
 
@@ -52,11 +52,11 @@ Information about the dataset is appearing on the top, like if the dataset is pu
     ii) Import by COLLECTION name </br>
     Will import a whole collection from Europeana based on the name of that collection
 
-6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image4.png" width="auto">
- or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image13.png" width="auto">
+6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image4.png" width="auto">
+ or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image13.png" width="auto">
  button and the “Define parameters” section is appearing</p>
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image14.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image14.png" width="auto">
 
 Here, the user inputs a collection name (in case of collection) or a query (in case of query), plus an api key that can be obtained from europeana.
 
@@ -64,33 +64,33 @@ As you can see, there is a “load key” dropdown appearing, enabling the user 
 
 7. After the user inputs the parameters, the dataset is ready to be **EXECUTED**:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image7.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image7.png" width="auto">
 
 Note: The user can use a combination of both QUERY and COLLECTION methods to create a dataset containing data from various Europeana Collections, or Europeana Queries. You just have to click again and define the new parameters. Example:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image15.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image15.png" width="auto">
 
 8. After we have defined the parameters, we can now execute our Dataset. We click on the Actions button on our instance (the parameter set) that we want to execute, and select “Execute Instance”:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image3.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image3.png" width="auto">
 
 9. A Status Report is opening, showing us how many items are processed:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image10.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image10.png" width="auto">
 
 
 10. When the execute finishes, the output is like this:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image1.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image1.png" width="auto">
 
 11. After the execution is completed successfully, we can now publish the dataset. To do that, we hit `Dataset Actions -> Publish` in the top right of the window:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image2.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image2.png" width="auto">
 
 12. When the publish is over, the output is like this:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image5.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image5.png" width="auto">
 
 13. Now that the dataset is published, we can now see its content from the “Published Collections” Tab:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/tree/main/docs/_media/image11.png" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image11.png" width="auto">
