@@ -52,8 +52,8 @@ Information about the dataset is appearing on the top, like if the dataset is pu
     ii) Import by COLLECTION name </br>
     Will import a whole collection from Europeana based on the name of that collection
 
-6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image4.png" width="auto">
- or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image13.png" width="auto">
+6. <p>The user selects “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image13.png" width="auto">
+ or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image4.png" width="auto">
  button and the “Define parameters” section is appearing</p>
 
 <img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image14.png" width="auto">
@@ -93,4 +93,4 @@ Note: The user can use a combination of both QUERY and COLLECTION methods to cre
 
 13. Now that the dataset is published, we can now see its content from the “Published Collections” Tab:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image11.png" width="auto">
+<img  class="full-width-image" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image11.png" width="auto">

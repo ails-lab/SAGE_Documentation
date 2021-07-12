@@ -1,0 +1,7 @@
+img{
+    max-width: 700px;
+}
+
+.full-width-image {
+    max-width: fit-content;
+}
