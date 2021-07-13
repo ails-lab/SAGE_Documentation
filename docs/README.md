@@ -105,3 +105,39 @@ Note: The user can use a combination of both QUERY and COLLECTION methods to cre
 13. Now that the dataset is published, we can now see its content from the “Published Collections” Tab:
 
 <img  class="full-width-image" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image11.png" width="auto">
+
+# Creating Enrichments
+
+## Introduction
+
+After the **Importation** step, the data is loaded into sage and ready to be processed by the platform.
+
+In SAGE, the modules that are responsible for data processing and enrichment creation are called **Annotators**.
+
+Each Annotator gets a number of metadata entries as Input, performs a specific operation, and produces Annotations (Enrichments) on the output.
+
+Also, SAGE gives the user the option to perform **preprocess operations** on the input data (decapitalization, regex match and replace etc) in order to improve the quality of the result.
+
+Each annotator has a specific set of properties that need to be defined.
+
+As every data operation in SAGE, the Annotators execution operation is separated in two steps:
+
+1. The **EXECUTION** step, where the annotator results are produced and stored as RDF files
+
+2. The **PUBLISH** step, where the already created annotator results (enrichments) are uploaded in the triplestore database, so the next steps of the data pipeline can be performed (eg Validation)
+
+## Available Annotators
+
+In SAGE, the most important Annotators are:
+
+1. AIDA Place Wikidata Annotator
+
+2. AIDA Place Geonames Annotator
+
+3. AIDA Wikidata Annotator
+
+4. InThesaurus Annotator
+
+5. Generic SPARQL Query Annotator
+
+## Step by step
