@@ -1,4 +1,4 @@
-# SAGE Instructions
+# SAGE Introduction
 
 ## What is SAGE?
 
