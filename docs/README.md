@@ -2,7 +2,7 @@
 
 ## What is SAGE?
 
-SAGE is a platform that leverages the use of Linked Data and AI in order to provide Automatic Enrichments on metadata, along with a validation functionality.
+SAGE is a platform that leverages the use of Linked Data and AI in order to allow generation of RDF datasets from heterogeneous source data, their enrichment using automatic enrichment tools, manual validation of the automatic enrichments, and publication of the generated RDF datasets.
 
 ## Data flow inside SAGE
 
