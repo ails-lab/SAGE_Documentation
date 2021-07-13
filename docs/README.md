@@ -10,14 +10,25 @@ SAGE is a platform that leverages the use of Linked Data and AI in order to prov
 
 ## How SAGE treats data
 
+In SAGE, every operation on metadata is separated into 2 distinct steps: 
+
+"**EXECUTION**": During the Execution step, the metadata is processed, enriched etc and the result is stored as RDF files, without uploading anything to the triplestore.
+
+"**PUBLICATION**": During the Publication step, the RDF files containing the result of the execution are uploaded to the triplestore, so that further stages of the metadata processing pipeline can occur.
+
+You will see this pattern appearing in every aspect of SAGE interaction with metadata, eg Metadata Importation, Annotator execution etc.
+
+# Data Importation 
+
+## Introduction
+
 Using SAGE, you can import data from multiple sources in various formats, in order to later perform operations on them. The data is harvested from remote APIs, mapped to RDF triples, and then stored in a triple store.
 
-The procedure that involves harvesting (gathering) data from remote APIs and converting (mapping) them to RDF triples is called the “**EXECUTION**” step of the importation of a dataset. After the execution step, the data is mapped to RDF and stored to our servers as RDF files, but not yet uploaded to the triple store (database). In this step, the user can double check to see that the operation was successful before proceeding to the actual publication.
+During the "**EXECUTION**" step, the data is harvested and mapped to RDF triples. Those triples are stored in our servers as RDF files, but are not yet uploaded to the database (triplestore).
 
-The procedure that involves uploading RDF files to the triplestore is called the “**PUBLICATION**” procedure. After publishing, the metadata is available in the triplestore and SAGE can perform enrichments on it.
+During the “**PUBLICATION**” step, the RDF files are uploaded to the triplestore. After publishing, the metadata is available in the triplestore and SAGE can perform enrichments and other operations on it.
 
-## Data Importation 
-
+## Step by step
 In this example, we are going to go step-by-step on how to import data from europeana to the SAGE platform
 
 1. Go to the “Collections Import” Tab
