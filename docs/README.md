@@ -471,6 +471,6 @@ Let’s assume that we want to annotate using Wikidata. We can simply copy the n
 
 Knowing that the Field we are annotating contains fashion designer names, this wikidata entry seems to be the correct one - a British fashion designer. Sometimes the signs will not be this obvious, but being validators usually implies that we have some domain expertise. So, more often than not, skimming through the Wikidata entry will reveal enough details to verify if this is the right entry.
 
-Once we decide on the Wikidata entry, we copy it’s URL from the address bar but we also have to change the URL to a URI by changing “https” to “http” (without the ‘s’) and also changing the “wiki” to “entity”. So the URL https://www.wikidata.org/wiki/Q19873890 shown below has the URI: http://www.wikidata.org/entity/Q19873890.Then we can paste it in the annotation input of the appropriate value, as described in “Adding an Annotation” chapter above.
+Once we decide on the Wikidata entry, we copy it’s URL from the address bar but we also have to change the URL to a URI by changing “https” to “http” (without the ‘s’) and also changing the “wiki” to “entity”. So the URL https://www.wikidata.org/wiki/Q19873890 shown below has the URI: http://www.wikidata.org/entity/Q19873890. Then we can paste it in the annotation input of the appropriate value, as described in “Adding an Annotation” chapter above.
 
 <img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-20.png" width="auto">
