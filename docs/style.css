@@ -1,3 +1,12 @@
+
+img {
+    border: 1px solid;
+}
+
+.sidebar img {
+    border: none;
+}
+
 @media only screen and (min-width: 1200px) {
     img{
         max-width: 700px;
@@ -6,4 +15,4 @@
     .full-width-image {
         max-width: 100%;
     }
-  }
+}
