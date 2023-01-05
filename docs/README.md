@@ -330,26 +330,26 @@ Once enrichments have been made, the next step is the process of validation in o
 ### 1. Select Validation Campaign to join
 When you enter the Validation Dashboard for the first time you will have no Campaigns on your **Campaigns** list on the left.
 
-<img src="/_media/validation-1.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-1.jpg" width="auto">
 
 Becoming a Validator for an Editor requires you to request access from them, either you do this on your first login or later on. To do so, click on the Join Editor button and select the desired Editor.
 
-<img src="/_media/validation-2.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-2.jpg" width="500">
 
 Once you select a Campaign, it will be added to your Campaign list:
 
-<img src="/_media/validation-3.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-3.jpg" width="500">
 
 Note that, each Editor you select will get a notification of your inquiry to become a Validator for them and will decide if and which of their datasets they wish to assign to you. This process can take time, since the access and the assignments are not granted automatically.
 
 In our case, we have already been approved by an Editor and we can see their assigned datasets by clicking on them in the Campaigns list.
 
-<img src="/_media/validation-4.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-4.jpg" width="auto">
 
 ### 2. Campaign Details
 Clicking on a Campaign reveals information about the Datasets it includes and the Fields under each dataset.
 
-<img src="/_media/validation-4.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-4.jpg" width="auto">
 
 Here we see that two datasets are included in the Demo Validation Campaign. Dataset *photography/7762* and *photography/7629*. Each of those Datasets contain two Fields - **dce:title** and **dce:description**.
 To the right of each title, the percentage of the respective validation progress appears. E.g. *photography/7629/dce:title* is 16.89% validated - with about 3/4ths of the annotation approved (green bar) and 1/4th of the annotations rejected (red bar).
@@ -357,7 +357,7 @@ To the right of each title, the percentage of the respective validation progress
 ### 3. Accessing a Field for Validation
 To perform a validation on a specific field, you need to click on the red window-looking icon to its right. Once you do, the Validation modal window will appear.
 
-<img src="/_media/validation-5.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-5.jpg" width="auto">
 
 ### 4. Understanding the Validation Window
 
@@ -365,7 +365,7 @@ To perform a validation on a specific field, you need to click on the red window
 
 When the Validation modal window pops up, it shows the items that this field contains, along with the annotated values on the left side and their corresponding annotations on the right side. In the screenshot below, for example, on the second item the annotator identified the words **Education** and **museum** - which it highlighted in red color - and connected them on the right with their corresponding URIs, correctly labeled "Education" and "museum". Under the Wikidata entities, the tool also shows their descriptions so that the validator can easily check if the annotated entity is the correct one without having to navigate to each URL.
 
-<img src="/_media/validation-6.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-6.jpg" width="auto">
 
 #### b. Grouped Field Values
 
@@ -373,28 +373,28 @@ Except from its value and annotations for each item, in the middle column, a num
 
 To view the list of all the items that contain this identical value, click on the globe icon.
 
-<img src="/_media/validation-15.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-15.jpg" width="auto">
 
 And by clicking on one of those links, you will be navigated to the corresponding item. Where you are able see the matching value (description in this case) along with all the other fields/value pairs it contains.
 
-<img src="/_media/validation-16.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-16.jpg" width="auto">
 
 #### c. Decoupling annotations 
 
 Similarly, as with the grouped field values above, annotations referring to identical strings are also grouped together. This way, if a word appears multiple times inside a value, the annotation of that word on the right will refer to all instances of that word. For example, in the image below, *UK* appears twice in the text, but only once in the annotations. The **lock icon** above the annotation indicates that this is a group annotation.
 
-<img src="/_media/validation-22.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-22.jpg" width="auto">
 
 If, for some reason, one or more of these similar instances has a different meaning than the others, it is possible to decouple those instances and change the annotation separately for each. To do this click the **lock icon**. You you see the lock being in the open position and one annotation per annotated word will appear, which you can validate separately.
 
-<img src="/_media/validation-23.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-23.jpg" width="auto">
 
 
 #### d. Annotations' Confidence Score
 
 On the far right, each annotation has a score from 0 to 1. This number indicates the confidence of the automatic annotation tool that the annotation it identified is the correct one. This value is not to be blindly trusted by the validator of course.
 
-<img src="/_media/validation-17.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-17.jpg" width="500">
 
 #### e. Annotation Colors Scheme
 
@@ -410,13 +410,13 @@ There are three possible colors for the annotation boxes, and the represent the 
 
 :asterisk: The specific field that the Grayed out annotation already appears can be seen by clicking on the ***i*** information icon to its bottom right.
 
-<img src="/_media/validation-18.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-18.jpg" width="500">
 
 #### f. Change the target field
 
 An annotation will eventually end up as a value in some field in the EDM record. If you feel that the annotation is targeting the wrong field, e.g. the URI for “London” should be added under *dce:spatial* instead of *dct:subject*, there is the option to change the target field by selecting a desired field under the “export as” drop down list (image below). You must select first the namespace prefix of the target field property and then the actual property within the selected namespace. Any namespace prefix and property appearing in gray corresponds to the predefined target field for that annotation.
 
-<img src="/_media/validation-21.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-21.jpg" width="500">
 
 #### g. Pages & Timer
 On the bottom of the page you can see the total **number of pages**, as well as the number of the page you are currently on. The system takes care of allowing only a single user on each individual page.
@@ -432,7 +432,7 @@ The **countdown timer** on the top left is just a precaution to make sure that, 
 #### i. Filters
 A useful tool for validating fields is the annotation filters on the top right.
 
-<img src="/_media/validation-7.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-7.jpg" width="auto">
 
 There are two modes on the filter **Annotated** and **Non Annotated**.
 
@@ -440,7 +440,7 @@ The first mode, **Annotated**, which is activated by default (blue), returns all
 
 Only in the Annotated mode, you have the option to select pages based on the validated annotations they contain - either partially validated or non-validated at all - by clicking on the **All** drop down button.
 
-<img src="/_media/validation-8.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-8.jpg" width="500">
 
 Those three options will each return the following type of pages:
 
@@ -452,14 +452,14 @@ Those three options will each return the following type of pages:
 
 The second mode, **Non Annotated**, on the other hand, will return the values for which the annotators didn’t manage to find a relevant URI. When entering this mode, we will still see the number of appearances of each value in the center column, but the right part of the page will be empty as no annotations exist yet for it.
 
-<img src="/_media/validation-9.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-9.jpg" width="auto">
 
 We will show you how to add your own annotation, for both annotated and non annotated values, later on.
 
 ### 5. Validating a Value
 Validating a value by **Accepting** or **Rejecting** it is quite intuitive. You simply click on the **Check** or the **X** mark on the beginning of each URI, respectively. On the screenshot below, for example, we just clicked the “accept” icon for the first value and the “reject” one for the second.
 
-<img src="/_media/validation-10.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-10.jpg" width="auto">
 
 As you can see, you can validate multiple values at once, before saving the page.
 
@@ -470,15 +470,15 @@ In records that the same annotation target appears more than once, and thus has 
 ### 6. Adding an Annotation
 If you want to add a new annotation for a value, whether this value already has an annotation or not, the process is the same. Click on the plus “+” icon on the far right of the line you want to add the annotation to.
 
-<img src="/_media/validation-11.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-11.jpg" width="auto">
 
 A new input field will appear, where you can paste the full URI of the annotation you want to suggest.
 
-<img src="/_media/validation-12.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-12.jpg" width="auto">
 
 If you add the annotation URI correctly, as described in the Appendix below, and the entity also has a *description* field, you will see the description appearing under the annotation URI and title.
 
-<img src="/_media/validation-24.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-24.jpg" width="auto">
 
 You also have the option to delete the annotation you have added, by clicking the “bin” icon, but only if no other user has had time to validate your entry. Once an annotation is validated, you cannot delete it.
 
@@ -489,23 +489,23 @@ Another thing to note is that if you add a URI that this value is already annota
 ### 7. Saving before exiting
 Once you’ve made all the desired changes to a page, you’ll need to save them by hitting “Save” on the bottom right.
 
-<img src="/_media/validation-13.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-13.jpg" width="auto">
 
 If you try to close the modal, by clicking the “X” button on the top right, without saving, you will receive an alert notifying you that if you close the modal, all changes will be lost.
 
-<img src="/_media/validation-14.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-14.jpg" width="auto">
 
 ### APPENDIX - Finding Wikidata URIs Manually
 Let’s say you visited a Non Annotated page or you see a missing annotation in a value, and you want to start adding manual annotation. In this example, let's say we want to annotate the word *Europe* in the second item.
 
-<img src="/_media/validation-11.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-11.jpg" width="auto">
 
 Let’s assume that we want to annotate using Wikidata. We can simply copy the name and paste it in a Google search, along with the keyword “wikidata” next to it, or by directly searching it in wikidata.org.
 
-<img src="/_media/validation-19.jpg" width="auto">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-19.jpg" width="auto">
 
 Knowing that the word we are annotating is a *continent*, this wikidata entry seems to be the correct one. Always check the entry's description, as it could also be the music band *Europe* or many others. Sometimes it may not be this obvious, but being validators usually implies that we have some domain expertise. More often than not, skimming through the Wikidata entry will reveal enough details to verify if this is the right entry.
 
 Once we decide on the Wikidata entry, we copy it’s URL from the address bar but we also have to change the URL to a URI by changing “https” to “http” (without the ‘s’) and also changing the “wiki” to “entity”. So the URL https://www.wikidata.org/wiki/Q46 shown below has the URI: http://www.wikidata.org/entity/Q46. Then we can paste it in the annotation input of the appropriate value, as described in “Adding an Annotation” chapter above.
 
-<img src="/_media/validation-20.jpg" width="500">
+<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/validation-20.jpg" width="500">
