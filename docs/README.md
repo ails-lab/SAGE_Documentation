@@ -138,86 +138,96 @@ As every data operation in SAGE, the Annotators execution operation is separated
 
 In SAGE, the most important Annotators are:
 
-1. AIDA Place Wikidata Annotator
+1. AIDA/Rubik Annotator
 
-2. AIDA Place Geonames Annotator
+2. Generic inThesaurus Annotator
 
-3. AIDA Wikidata Annotator
-
-4. InThesaurus Annotator
+4. Simple InThesaurus Annotator
 
 5. Generic SPARQL Query Annotator
 
 ## Step by step
 
-### 1. Select a Collection
+### 1. Select a published Dataset
 
-Head to the *Published Collections* tab and select the Collection you want to annotate from the list on the left. Here, for example, we selected *ARME - EuropeanaFashion*.
+Head to the Data tab, select Dataset and select the Dataset you want to annotate from the list on the left. Make sure that the dataset is published. 
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-1.png" width="auto">
+Go to the View and Annotate tab.
 
-Once one of the available collection is selected from the *Published Collections* list,
+<img src="_media/Image_15.png" width="auto">
 
-### 2. View Collection Data
 
-Once you have chosen which one of the collection’s fields you want to annotate, click on “*Actions*” the right side of that row and select “*View Values*” (image below) to get an idea of what the data looks like. Here we selected the “dc:creator” field, which contains 2022 entries represented by the number on its right.
+### 2. View Collection Data - Understand your Data
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-2.png" width="auto">
+On the View and Annotate tab you can browse the structure of your data to see all the available properties. You must choose which of the dataset's fields you want to annotate.
 
-The values are sorted according to appearance frequency, as seen in the “Values” screenshot below.
+Once you have chosen which one of the collection’s fields you want to annotate, click on the menu icon in the right side of that row and select “*View Values*” to get an idea of what the data looks like. 
 
-### 3. Understand your Data
+<img src="_media/Image_16.png" width="auto">
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-3.png" width="auto">
+When you click on "View Values", a sidebar will appear containing all the values of this property:
+
+<img src="_media/Image_17.png" width="auto">
+
+
+Here we selected the “dc:creator” field, which contains 255 entries, of which 90 are unique. The values are sorted according to appearance frequency, as seen in the “Values” screenshot below.
 
 In order to select or create the best annotator for the task, you need to have an idea of what the data looks like. In this case we have creator names, which the annotator service will have to discover and connect to the appropriate URIs. Other times we may have plain dates, colors, numbers or even plain text like descriptions of items and sometimes (or most of the times) we will have to deal with non-normalized data - like in our case here.
 
-We see, for example, that some names have an occupation in parentheses next to the name (e.g. “(Curator)” and other), or include a slash “/” followed by further information.
+We see, for example, that some names have an occupation in parentheses next to the name (e.g. “(Designer)” and other), or include a slash “/” followed by further information.
 
 We will see how we deal with those on the Preprocessing step below, using Regular Expressions (Regex).
 
-### 4. Add an Annotator
+### 3. Add an Annotator
 Now that you know what kind of data you are dealing with and what annotation method you are going to use, it’s time to add an annotator to the category.
 
-Under the “Actions” drop-down, select the “Add Annotator” option and the New Annotator box will pop open, as seen below.
+Click on the "+" icon to add an annotator.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-4.png" width="auto">
+<img src="_media/Image_18.png" width="auto">
+
+The "Add annotator" sidebar will appear:
+
+<img src="_media/Image_19.png" width="auto">
+
 
 #### 4.1. Select Annotator
 
-You have many different options here, but here we’ll discuss the “Ambiverse Annotator”, “Generic SPARQL Query Annotator” and “inThesaurus Annotator".
+You have many different options here, but here we’ll discuss the AIDA/Rubik Annotator”, “Generic SPARQL Query Annotator” and “inThesaurus Annotator (Simple and Generic versions)".
 
-The “**Ambiverse Annotator**” is your best bet when dealing with named entities contextualized within rich text, such as “description” fields that contain the name you want to query for. E.g. “Paris is beautifully lit during nighttime” instead of only “Paris”. Even in cases where the context is irrelevant to the named entity, this annotator tends to do better than no context at all. 
+The “**AIDA/NERD Annotator**” is your best bet when dealing with named entities contextualized within rich text, such as “description” fields that contain the name you want to query for. E.g. “Paris is beautifully lit during nighttime” instead of only “Paris”. Even in cases where the context is irrelevant to the named entity, this annotator tends to do better than no context at all. 
 
-The Ambiverse Annotator employs what are referred to as Named Entity Recognition and Disambiguation tools (NERD tools). That is, methods that extract the named entities from a body of text (Recognition) and to successfully connect those entities to the corresponding entries within a knowledge base, such as Wikidata (Disambiguation). Additionally, such annotators don’t require manual pre-processing since they internally employ Named Entity Recognition tools to automatically extract the named entities, and no additional data is required to help them disambiguate the terms, making them a plug-n-play solution for general purpose enrichments.
+The AIDA/NERD Annotator employs what are referred to as Named Entity Recognition and Disambiguation tools (NERD tools). That is, methods that extract the named entities from a body of text (Recognition) and to successfully connect those entities to the corresponding entries within a knowledge base, such as Wikidata (Disambiguation). Additionally, such annotators don’t require manual pre-processing since they internally employ Named Entity Recognition tools to automatically extract the named entities, and no additional data is required to help them disambiguate the terms, making them a plug-n-play solution for general purpose enrichments.
 
 The “**Generic SPARQL Query Annotator**” on the other hand is for occasions where you need to make more specific queries. For example: the given label needs to be of the concept “human” and have a role “occupation” and this occupation needs to be of concept “creator”, if we need our annotator to match only creators of some kind.
 
-The "**inThesaurus Annotator**" matches terms in the text with terms of a given thesaurus/vocabulary, employing lemmatizers in order to detect variants of the thesaurus terms in the text.
+The "**inThesaurus Annotator (Simple and Generic)**" matches terms in the text with terms of a given thesaurus/vocabulary, employing lemmatizers in order to detect variants of the thesaurus terms in the text.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-5.png" width="auto">
 
 #### 4.2. Fill in the Details
-At this point you need to fill in some details depending on the annotator you selected:
+At this point you need to fill in some details. There are some common fields across all annotators, and other specific fields depending on the annotator you selected.
 
-##### Ambiverse Annotator
+##### Common Fields
 
 1. **Variant**
     * “**serial execution**” (slower) - The system will execute a query for each value in the data, even if the value re-appears multiple times. If, for example, the creator “Mikael Akerfeldt” appears 20 times, twenty single identical queries will be executed.
     * “**grouped execution**” (faster) - All replications of the same value will be recognised and grouped as a single value, for which value a single query will be executed.
-2. **View as** - your options are “term”, “place” and “time”. Choose accordingly, in our case we are looking for creator names so “term” is the appropriate choice.
-3. **Language** - The language encoding of your input values (helps with special characters). Choose between English, German, Spanish, Russian, Czech, Chinese and others.
 
-##### Generic SPARQL Query Annotator
+2. **Default Target Property**
+    A property for automatically exporting annotations. It determines the default property that links the annotations to the original data elements.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-6.png" width="auto">
+##### Fields by annotator type
 
-1. **Variant**
-    * “**serial execution”** (slower) - The system will execute a query for each value in the data, even if the value re-appears multiple times. If, for example, the creator “Mikael Akerfeldt” appears 20 times, twenty single identical queries will be executed.
-    * “**grouped execution**” (faster) - All replications of the same value will be recognised and grouped as a single value, for which value a single query will be executed.
-2. **View as** - your options are “**term**”, “**place**” and “**time**”. Choose accordingly, in our case we are looking for creator names so “term” is the appropriate choice.
-3. **Endpoint** - The endpoint that the annotator will iconnect to for querying. In most cases you will use Wikidata’s endpoint https://query.wikidata.org/bigdata/namespace/wdq/sparql
-4. **SPARQL-query-** This is where you add your custom query if you are using an annotation method that supports it, for example the Generic SPARQL Query Annotator. The SPARQL query accepts two possible variables for the SELECT function. The first one being the `?uri` and the optional variable `?score`. `?uri` is a reserved variable name for the actual enrichment/uri that the record/text will be linked too, and `?score` is another reserved name for the “confidence score” of the respective enrichment. In the example below we use `?uri` to denote the URIs connected to photographer names and we define `?score` as the fraction of 1 over the total number of all returned `?uris`. In other words, we use this `?score` variable as a gauge for how likely a returned `?uri` is to be the correct one. For example, if we get a single `?uri` as an answer, the score will be 1/1 = 1 (or 100%) that this is the right URI. But if a `?uri` is returned along with 4 others, then the likelihood of each one being the correct one is only 1/5 = 0.2 (25%).
+###### AIDA/Rubik Annotator
+
+No extra information is needed, this annotator is plug n play
+
+###### Generic SPARQL Query Annotator
+
+
+<img src="_media/Image_20.png" width="auto">
+
+1. **Endpoint** - The endpoint that the annotator will iconnect to for querying. In most cases you will use Wikidata’s endpoint https://query.wikidata.org/bigdata/namespace/wdq/sparql
+2. **SPARQL-query-** This is where you add your custom query if you are using an annotation method that supports it, for example the Generic SPARQL Query Annotator. The SPARQL query accepts two possible variables for the SELECT function. The first one being the `?uri` and the optional variable `?score`. `?uri` is a reserved variable name for the actual enrichment/uri that the record/text will be linked too, and `?score` is another reserved name for the “confidence score” of the respective enrichment. In the example below we use `?uri` to denote the URIs connected to photographer names and we define `?score` as the fraction of 1 over the total number of all returned `?uris`. In other words, we use this `?score` variable as a gauge for how likely a returned `?uri` is to be the correct one. For example, if we get a single `?uri` as an answer, the score will be 1/1 = 1 (or 100%) that this is the right URI. But if a `?uri` is returned along with 4 others, then the likelihood of each one being the correct one is only 1/5 = 0.2 (25%).
 
 **SPARQL-query example**
 The following query, for example, returns the URIs of the entities that have an english label with the value of a Creator’s name, and furthermore that this creator has the occupation of “photographer”.
@@ -242,26 +252,28 @@ SELECT DISTINCT ?uri ?score WHERE {
   }
 }
 ```
+###### Simple inThesaurus Annotator
 
-##### inThesaurus Annotator
+1. **Thesaurus** - This is where you select the Thesaurus you want to use. The imported Thesauruses are under the “Vocabulary Import” tab, where you can add more Thesauruses if you wish.
+2. **Language** - Depending on the Thesaurus you chose, here you will see the languages that this Thesaurus contains. Leave it blank if you want to search through all available languages, otherwise select one specific language that you will restrict your search into.
+3. **Scheme** - Search under a specific subset of the Thesaurus only, e.g. “http://thesaurus.europeanafashion.eu/thesaurus/Colours” if you need only colors. Leave it blank to search all possible schemes.
+4. **Lemmatizer** - Determine whether to use the Lemmatizer or not. This is generally desirable, since it will produce eventually more matches.
 
-1. **Variant**
-    * “serial execution” (slower) - The system will execute a query for each value in the data, even if the value re-appears multiple times. If, for example, the creator “Mikael Akerfeldt” appears 20 times, twenty single identical queries will be executed.
-    * “grouped execution” (usually faster) - All replications of the same value will be recognised and grouped as a single value, for which value a single query will be executed. (This option is slightly slower than the “serial execution” option only in cases where there are no duplicate values in the data, because of the overhead of the grouping task that is performed ahead of the execution.)
-2. **View as** - your only option is “term” for the time being, it could also be “place” or  “time”. Choose according to what you are querying for.
-3. **Thesaurus** - This is where you select the Thesaurus you want to use. The imported Thesauruses are under the “Vocabulary Import” tab, where you can add more Thesauruses if you wish.
-4. **Language** - Depending on the Thesaurus you chose, here you will see the languages that this Thesaurus contains. Leave it blank if you want to search through all available languages, otherwise select one specific language that you will restrict your search into.
-5. **Scheme** - Search under a specific subset of the Thesaurus only, e.g. “http://thesaurus.europeanafashion.eu/thesaurus/Colours” if you need only colors. Leave it blank to search all possible schemes.
-6. **Default-text-language** - If “Autodetect-text-language” below fails or is set to False, this is the language that the query will default to.
-7. **Autodetect-text-language**
+###### Generic inThesaurus Annotator
+
+1. **Thesaurus** - This is where you select the Thesaurus you want to use. The imported Thesauruses are under the “Vocabulary Import” tab, where you can add more Thesauruses if you wish.
+2. **Language** - Depending on the Thesaurus you chose, here you will see the languages that this Thesaurus contains. Leave it blank if you want to search through all available languages, otherwise select one specific language that you will restrict your search into.
+3. **Scheme** - Search under a specific subset of the Thesaurus only, e.g. “http://thesaurus.europeanafashion.eu/thesaurus/Colours” if you need only colors. Leave it blank to search all possible schemes.
+4. **Default-text-language** - If “Autodetect-text-language” below fails or is set to False, this is the language that the query will default to.
+5. **Autodetect-text-language**
     * False - No autodetection language is initiated, the query runs with the default language set above.
     * True - The tool looks for any language labels accompanying the query values and uses them as a language. If no language labels are found, it tries to parse the text and uses NLP to auto detect the language used.
     * Force - The tool will now check for language labels, instead it will try to use NLP to automatically detect what language of the text.
-8. **Lemmatize** - Lemmatization uses the stem of the words in order to query. For example “red” and “reddish” or “redder” have the same stem and the tool will understand them as the same word, returning the URI for “red”. You should generally turn the lemmatizer to True, unless you want to query names or any other time you need the values to be parsed exactly as they are worded.
-9. **Mode** - this is the URI schema you want to use
+6. **Lemmatize** - Lemmatization uses the stem of the words in order to query. For example “red” and “reddish” or “redder” have the same stem and the tool will understand them as the same word, returning the URI for “red”. You should generally turn the lemmatizer to True, unless you want to query names or any other time you need the values to be parsed exactly as they are worded.
+7. **Mode** - this is the URI schema you want to use
     * Thesaurus URI - Keeps the default URI path of the selected Thesaurus.
     * Exact match URI - Uses a custom URI path, for example if you want to use Wikidata URI or a custom Thesaurus URI - this usually applies when using custom/temporary thesauri/vocabularies that the URI of the terms is not the URI that we want for the enrichment
-10. **Full-text-match**
+8. **Full-text-match**
     * True - Input the full string of the value in the query, e.g. “Elvish Priestley” would be either found as a whole or not at all.
     * False - Check the string word-by-word for possible matches, e.g. in a name Thesaurus “Elvish” and “Priestly” would be queried separately if they both existed as entities in a Thesaurus of names.
 
@@ -272,21 +284,21 @@ In those cases, executing a preprocessing step in order to extract the relevant 
 
 In order to do this, scroll down to the “Preprocessing” section and click on the plus “+” icon in order to add a new Regex.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-7.png" width="auto">
+<img src="_media/Image_21.png" width="auto">
 
 Before adding the Regex itself, you’ll need to choose what the function will be. For example, do you need to return an “exact match” of your Regex? Do you need to “replace” it with another string or maybe make it “lowercase”?
 
 Choose the option you need. In our case, we need to return the “exact match” or the Regex we will provide.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-8.png" width="auto">
+<img src="_media/Image_22.png" width="auto">
 
-Now add the Regular Expression and hit “Create Annotator”.
+Now add the Regular Expression.
 
 Our Regex keeps only the text before a left parenthesis `(` or a slash `/`.
 
 ⚠️ NOTE: Due to a backend issue, you need to always use **double backslash** `\\` instead of single ones when trying to escape characters.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-9.png" width="auto">
+Once everything is done, hit "Save" to create the Annotator.
 
 ### 5. Execute the Annotator
 Now that your new annotator is added to the list below, head to the “Actions” drop-down on that annotator’s row and click on “Execute”.
