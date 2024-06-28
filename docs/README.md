@@ -31,80 +31,88 @@ During the “**PUBLICATION**” step, the RDF files are uploaded to the triples
 ## Step by step
 In this example, we are going to go step-by-step on how to import data from europeana to the SAGE platform
 
-1. Go to the “Collections Import” Tab
+1. From the "Data" Tab, select the "Dataset" option
    
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image9.png" width="auto">
+<img src="_media/Image_1.png" width="auto">
 
 On this tab, the user has an overview of the datasets that they have already created. 
 
-2. Click on the “+” sign next to “Dataset” in order to create a new Dataset. This opens the “Create Dataset” modal, shown below:
+2. Click the "Add new Dataset" button in the bottom of the screen. This will open the "New Dataset" sidebar:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image12.png" width="auto">
+<img src="_media/Image_2.png" width="auto">
 
-Here, the user defines a name for the dataset they are going to create, and selects which import method to use. In our case, we will choose “Europeana Import”.
+Here, the user selects a dataset type. In our case, we will choose “Collection”, which is a general purpose dataset. Then, user defines a name for the dataset they are going to create. 
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image8.png" width="auto">
+Then click Save.
 
-Then click OK.
+<img src="_media/Image_3.png" width="auto">
+
 
 3. After creation, the dataset is now available in the list on the left, which as we mentioned, contains the datasets that the user has created. Click on the name of the dataset that you just created.
 
 4. The Dataset overview window appears
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image6.png" width="auto">
+<img src="_media/Image_4.png" width="auto">
 
-Information about the dataset is appearing on the top, like if the dataset is published, the dataset name, id etc.
+Information about the dataset is appearing on the center bar, like if the dataset is published, the dataset name, id etc.
 
-5. Right now the dataset is empty. It is created, but not populated with data. In order to populate it with data, the user has two different methods of import to choose from (on the case of Europeana Import):
+5. Right now the dataset is empty. It is created, but not populated with data. In order to populate it with data, the user needs to create a mapping. Select the Add Mapping button and the "Add mapping".
 
-    i) Import by QUERY </br>
-    The data that will be imported will be the results of a query performed against the Europeana API
+Then,  the “Create Mapping” sidebar will appear, where you can fill in the details of your mapping.
 
-    ii) Import by COLLECTION name </br>
-    Will import a whole collection from Europeana based on the name of that collection
+<img src="_media/Image_5.png" width="auto">
 
-6. <p>The user selects the “Add COLLECTION” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image13.png" width="auto">
- or “Add QUERY” <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image4.png" width="auto">
- button and the “Define parameters” section is appearing</p>
+Give a name to the mapping, and optionally a description. 
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image14.png" width="auto">
+The “Mapping Source” option represents the type of mapping you wish to apply.  SAGE offers a list of predefined mappings which you can readily apply to import cultural heritage metadata that follow the Europeana Data Model. To use them, select “Predefined Mapping” from the “Mapping Source” option, and then a “Predefined Mapping” dropdown menu will appear. There are  ready-to-use mappings to import metadata records from the Europeana platform as well as from MINT, a platform used by aggregators. Moreover,  you can upload a zip file containing EDM metadata. 
+
+In our case, select "EDM from Europeana (by collection)"
+<img src="_media/Image_6.png" width="auto">
+
+Below, you can see the parameters related to this mapping which the user needs to fill in when creating an instance of that mapping. In the case of the Europeana collection import, the Europeana API key is needed as well as the collection name.
+
+Clck on Save, and your mapping is created.
+
+6. Now,  you need to define the parameters of the mapping you just created. To do so, open the menu of the mapping and select “Create instance”. 
+
+<img src="_media/Image_7.png" width="auto">
+
+The Create Mapping instance sidebar appears.
+
+<img src="_media/Image_8.png" width="auto">
+
 
 Here, the user inputs a collection name (in case of collection) or a query (in case of query), plus an api key that can be obtained from europeana.
 
-As you can see, there is a “load key” dropdown appearing, enabling the user to use one of his predefined API keys (keys can be defined in the profile section)
+Click save and your mapping instance is created.
 
-7. After the user inputs the parameters, the dataset is ready to be **EXECUTED**:
+7. After we have defined the parameters, we can now execute our Dataset. We click on menu button on our instance that we want to execute, and select “Execute":
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image7.png" width="auto">
-
-Note: The user can use a combination of both QUERY and COLLECTION methods to create a dataset containing data from various Europeana Collections, or Europeana Queries. You just have to click again and define the new parameters. Example:
-
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image15.png" width="auto">
-
-8. After we have defined the parameters, we can now execute our Dataset. We click on the Actions button on our instance (the parameter set) that we want to execute, and select “Execute Instance”:
-
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image3.png" width="auto">
+<img src="_media/Image_9.png" width="auto">
 
 9. A Status Report is opening, showing us how many items are processed:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image10.png" width="auto">
+<img src="_media/Image_10.png" width="auto">
 
 
 10. When the execute finishes, the output is like this:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image1.png" width="auto">
+<img src="_media/Image_11.png" width="auto">
 
-11. After the execution is completed successfully, we can now publish the dataset. To do that, we hit `Dataset Actions -> Publish` in the top right of the window:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image2.png" width="auto">
+11. After the execution is completed successfully, we can now publish the dataset. To do that, we hit from the Dataset menu `Publish` in the top left:
+
+<img src="_media/Image_12.png" width="auto">
 
 12. When the publish is over, the output is like this:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image5.png" width="auto">
+<img src="_media/Image_13.png" width="auto">
 
-13. Now that the dataset is published, we can now see its content from the “Published Collections” Tab:
 
-<img  class="full-width-image" src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/image11.png" width="auto">
+13. Now that the dataset is published, we can now see its content from the “View and Annotate” Tab:
+
+<img src="_media/Image_14.png" width="auto">
+
 
 # Creating Enrichments
 
