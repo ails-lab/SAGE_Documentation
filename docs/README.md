@@ -301,45 +301,39 @@ Our Regex keeps only the text before a left parenthesis `(` or a slash `/`.
 Once everything is done, hit "Save" to create the Annotator.
 
 ### 5. Execute the Annotator
-Now that your new annotator is added to the list below, head to the “Actions” drop-down on that annotator’s row and click on “Execute”.
+Now that your new annotator is added to the list below, head to the menu on that annotator’s row and click on “Execute”.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-10.png" width="auto">
-
-⚠️ NOTE: Execution status does not update live. Refresh the Collection by clicking on it’s name in the Collections list on the left.
-
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-11.png" width="auto">
+<img src="_media/Image_23.png" width="auto">
 
 During execution the notification text will write “Executing” and once the annotator is “Executed” you will also see the number of results it returned.
-
-In our case it found “405” URIs that matched our query.
-
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-12.png" width="auto">
-
-If the annotator fails, it means that there is a problem with the syntax and the query cannot get executed.
 
 If the annotator returns zero results, try another query or another annotator altogether.
 
 ### 6.  Review Annotations
-Before publishing your annotations, it is advised to have a look at what your annotator actually returned. To do this, click on the “Actions” drop-down of your annotator and select “Preview Annotations”.
+Before publishing your annotations, it is advised to have a look at what your annotator actually returned. To do this, click on the menu of your annotator and select “Preview Annotations”.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-13.png" width="auto">
+<img src="_media/Image_24.png" width="auto">
 
-In our example, we see that the first few URIs actually do match what seems to be the appropriate person and, on top of that, due to our Preprocessing the annotator realized that the first two entries are the same person despite the “(Designer)” suffix on the latter string.
+The Preview Annotations sidebar appears:
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-14.png" width="auto">
+<img src="_media/Image_25.png" width="auto">
+
+Now that you can inspect your annotations.
 
 ### 7. Publish Annotations
 Once you have checked your annotations and everything seems as expected, it’s time to publish the annotations to the triplestore.
 
-To do this you need to select the checkmark next to your annotator’s name, click on actions and then select the “Publish Selected Annotations” option.
+To do this you need to select the checkmark next to your annotator’s name and then select the “Publish” option.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-15.png" width="auto">
+<img src="_media/Image_26.png" width="auto">
 
 After the annotations are published, the notification text will read “Published” accompanied by the publication date.
 
-<img src="https://raw.githubusercontent.com/ails-lab/SAGE_Documentation/main/docs/_media/annotation-16.png" width="auto">
+<img src="_media/Image_27.png" width="auto">
 
 # Validating Enrichments
+
+NOTE: From now and below, the documentation refers to previous version of SAGE, so the screenshots will showcase a different UI. The core idea is the same though.
 
 ## Introduction
 
